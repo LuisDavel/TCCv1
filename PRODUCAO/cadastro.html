@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <div id="fundo_background">
+        <div class="container">
+
+            <div class="conteudo">
+                <div class="content_pergunta">
+
+                    <img id="img" onclick="gerarRandom()" src="../HOMOLOGA/img/Gifs animados Dado 8.gif" alt="" >
+                    <p id="p1">a  </p>
+                    <img id="img2" onclick="gerarRandom2()" src="../HOMOLOGA/img/Gifs animados Dado 8.gif" alt="">
+                    <p id="p2">b </p>
+                    <img id="img3" onclick="gerarRandom3()"src="../HOMOLOGA/img/Gifs animados Dado 8.gif" alt="">
+                    <p id="p3">c  </p>
+                    
+                    <input id="text" onchange="fatora()" type="text" placeholder="O que é isso que apareceu para nós ?"><br><br>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+
+    var img = document.getElementById('img');
+
+    function gerarRandom() {
+        x = Math.floor((Math.random() * 1) + 1);
+
+        document.getElementById("p1").innerHTML = x;
+
+        switch(x){
+          case 1:
+            document.getElementById("p1").innerHTML = x;
+            console.log('Retorno do Random: ' + x)
+            img.setAttribute('src', '../HOMOLOGA/img/heroi.png')
+            break;
+          
+          case 2: 
+            document.getElementById("p1").innerHTML = x;
+            console.log('Retorno do Random1: ' + x)
+            img.setAttribute('src', 'teste.png')
+        
+            break;
+        };
+    }
+
+    function gerarRandom2() {
+        x1 = Math.floor((Math.random() * 1) + 1);
+
+        document.getElementById("p2").innerHTML = x1;
+
+        switch(x){
+          case 1:
+            document.getElementById("p2").innerHTML = x1;
+            console.log('Retorno do Random2: ' + x1)
+            img.setAttribute('src', '../HOMOLOGA/img/heroi.png')
+            break;
+          
+          case 2: 
+            document.getElementById("p2").innerHTML = x;
+            console.log('Retorno do Random: ' + x)
+            img.setAttribute('src', 'teste.png')
+        
+            break;
+        };
+    }
+
+    function gerarRandom3() {
+        x2 = Math.floor((Math.random() * 1) + 1);
+
+        document.getElementById("p2").innerHTML = x2;
+
+        switch(x){
+          case 1:
+            document.getElementById("p3").innerHTML = x2;
+            console.log('Retorno do Random3: ' + x2)
+            img.setAttribute('src', '../HOMOLOGA/img/heroi.png')
+            break;
+          
+          case 2: 
+            document.getElementById("p2").innerHTML = x;
+            console.log('Retorno do Random3: ' + x)
+            img.setAttribute('src', 'teste.png')
+        
+            break;
+        };
+    }
+
+    
+   
+    function fatora(){
+       var b = (x + x1 + x2)
+      var acerto = document.getElementById("text").value;
+      console.log('Var função acerto: ' + acerto)
+      if(b == acerto ){
+        img.setAttribute('src', '../HOMOLOGA/img/heroi2.png')
+        console.log('Var da função random: ' + (x + x1 + x2) + ' igual a B = ' + b)
+        //document.getElementById("demo1").innerHTML = b
+  
+      }
+    }
+
+</script>
